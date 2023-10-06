@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+      // degree process through call back funtion
+    //btech degre =>first year 2nd year , third yar and final year then degree
+
+
+    function firstYEAR1(callback){   
+        setTimeout(() => {
+            const firstYEAR="first year completed";
+            console.log("....",firstYEAR);
+            callback(firstYEAR);
+        }, 2000);
+    };
+    function secondYEAR2(firstYEAR, callback){
+        setTimeout(() => {
+            const secondYEAR="second year completed";
+            console.log("....",secondYEAR);
+            callback(secondYEAR);
+        }, 2000);
+    };
+    function thirdYEAR3(secondYEAR, callback){
+        setTimeout(() => {
+            const thirdYEAR= "third year completed";
+            console.log("....",thirdYEAR);
+            callback(thirdYEAR);
+        }, 2000);
+    };
+    function fourthYEAR4(thirdYEAR, callback){
+        setTimeout(() => {
+            const fourthYEAR= "fourth year completed";
+            console.log("....",fourthYEAR);
+            callback(fourthYEAR)
+        }, 2000);
+    };
+    function getdegree( fourthYEAR, callback){
+        setTimeout(() => {
+            const degree= "take your degree";
+            console.log("....",getdegree);
+            callback(getdegree)
+        }, 2000);
+    };
+    
+
+    firstYEAR1((firstYEAR)=>{
+        secondYEAR2(firstYEAR,(secondYEAR)=>{
+            thirdYEAR3(secondYEAR,(thirdYEAR)=>{
+                fourthYEAR4(thirdYEAR,(fourthYEAR)=>{
+                    console.log("btech completed and take your degree");
+                });
+            });
+        });
+    });
+   
+
+    // getdegree((degree)=>{
+    //     console.log("btech completed and got the degree",degree);
+    // })
+
+</script>
+</html>

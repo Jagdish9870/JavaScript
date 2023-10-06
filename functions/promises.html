@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    // promises are used to overcome the problem of callback hell
+
+    const college = new Promise(function(resolve,reject){
+        const degree= true;
+        if(degree){
+            resolve("finally i got my degree");
+        }
+        else
+        {
+            reject(" you have not completed ");
+        }
+    });
+    college
+    .then((data) => {
+        console.log("yeah",data);
+        
+    })
+    .catch((data) => {
+        console.log("sorry",data);
+        
+    })
+    .finally(()=>
+    {
+        console.log(" welcome to uiet kuk....");
+    });
+</script>
+</html>

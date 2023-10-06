@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events
+    </title>
+    <style type="text/css">
+        *{
+            background-color: aqua;
+            margin: 0;
+            padding: 0;
+            font-family: cursive;
+            box-sizing:border-box;
+        }
+        .container{
+            width: 100%;
+            height: auto;
+            justify-content: center;
+            
+            
+        }
+        .Box{
+            box-sizing: border-box;
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            border-radius: 25px;
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display:inline-block;
+            text-align: center;
+            color: white;
+            line-height: 200px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="Box" id="Box-1" onclick="my()">Box-1</div>
+        <div class="Box" id="Box-2" onmouseover="my1()">Box-2</div>
+        <div class="Box" id ="Box-3"onmousemove="my2()">Box-3</div>
+        <div class="Box" id="Box-4" >Box-4</div>
+    </div>
+    <form action="#">
+        <input type="text" onkeypress="keypress()" onkeydown="keydown()" onkeyup="keyup()">
+    </form>
+    
+</body>
+<script type="text/javascript">
+    function my(){
+        console.log("dont touch again")
+    };
+    function my1(){
+        console.log("again touched")
+    }
+    function my2(){
+        console.log("haha")
+    }
+    function  keypress(){
+        console.log("pressed")
+    };
+    function  keyup(){
+        console.log("up")
+    };
+    function  keydown(){
+        console.log("down")
+    };
+
+</script>
+</html>

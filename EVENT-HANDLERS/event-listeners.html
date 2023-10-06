@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event-listners</title>
+    <style type="text/css">
+        *{
+            background-color: aqua;
+            margin: 0;
+            padding: 0;
+            font-family: cursive;
+            box-sizing:border-box;
+        }
+        .container{
+            width: 100%;
+            height: auto;
+            justify-content: center;
+            
+            
+        }
+        .box{
+            box-sizing: border-box;
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            border-radius: 25px;
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display:inline-block;
+            text-align: center;
+            color: white;
+            line-height: 200px;
+            
+        }
+    </style>
+   
+</head>
+<body><div class="container">
+    <div class="box" id="box-1">box-1</div>
+    <div class="box" id="box-2">box-2</div>
+    <div class="box" id="box-3">box-3</div>
+    <div class="box"id="box-4">box-4</div>
+</div>
+    
+</body>
+<script type="text/javascript">
+    const box1= document.getElementById('box-1');
+    box1.addEventListener('click' ,()=>{
+        console.log("add event listener click method")
+    });
+    const box2= document.getElementById('box-2');
+    box2.addEventListener('mouseover' ,()=>{
+        console.log("add event listener mouseover method")
+    });
+    const box3= document.getElementById('box-3');
+    box3.addEventListener('mousemove' ,()=>{
+        console.log("add event listener mousemove method")
+    });
+    const box4= document.getElementById('box-4');
+    box4.addEventListener('click' ,()=>{
+        console.log("add event listener click method")
+    })
+    
+
+</script>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+        function firstYEAR1(){ 
+            return new Promise((resolve, reject)=>{
+            setTimeout(() => {
+            const firstYEAR="first year completed";
+           
+            resolve(firstYEAR);
+        }, 2000);
+
+            })     
+
+    };
+    function secondYEAR2(firstYEAR){
+        return new Promise((resolve, reject)=>{
+
+        setTimeout(() => {
+            const secondYEAR="second year completed";
+            
+            resolve(secondYEAR);
+        }, 2000);
+        })
+    };
+    function thirdYEAR3(secondYEAR){
+        return new Promise((resolve, reject)=>{
+        setTimeout(() => {
+            const thirdYEAR= "third year completed";
+            
+           resolve(thirdYEAR);
+        }, 2000);
+    })
+    };
+    function fourthYEAR4( thirdYEAR){
+        return new Promise((resolve, reject)=>{
+        setTimeout(() => {
+            const fourthYEAR="fourth year completed";
+            
+            resolve(fourthYEAR)
+        }, 2000);
+    })
+    };
+    function getdegree1( fourthYEAR){
+        return new Promise((resolve, reject)=>{
+        setTimeout(() => {
+            const getdegree="btech completed";
+            
+            resolve(getdegree)
+        }, 2000);
+    })
+    };
+    
+
+    async function degreehere(){
+        const firstYEAR= await firstYEAR1();
+        console.log("....",firstYEAR);       
+
+        const secondYEAR= await secondYEAR2(firstYEAR);
+        console.log("....",secondYEAR);
+
+        const thirdYEAR=await thirdYEAR3(secondYEAR);
+        console.log("....",thirdYEAR);
+
+        const fourthYEAR= await fourthYEAR4(thirdYEAR);
+        console.log("....",fourthYEAR);
+
+        const getdegree=await getdegree1(fourthYEAR);
+        console.log("btech completed and got the degree");
+    }
+    degreehere();
+// call back hell method 1
+
+    // firstYEAR1((firstYEAR)=>{
+    //     secondYEAR2(firstYEAR,(secondYEAR)=>{
+    //         thirdYEAR3(secondYEAR,(thirdYEAR)=>{
+    //             fourthYEAR4(thirdYEAR,(fourthYEAR)=>{
+    //                 console.log("btech completed and got the degree",degree);
+
+
+    //             });
+                
+
+    //         });
+
+           
+            
+    //     });
+    // });
+   
+
+    
+   
+</script>
+</html>

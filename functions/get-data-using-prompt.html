@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt</title>
+</head>
+<body>
+    NAME: <i id="x"></i>
+    <br/>
+    <br/>
+    <button onclick="call()">call</button>
+    
+</body>
+<script type="text/javascript">
+    function call()
+    {
+       var x=  prompt("enter your name", "");
+       document.getElementById('x').innerHTML=x;
+    }
+
+</script>
+</html>

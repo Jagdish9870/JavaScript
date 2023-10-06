@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    //setTimeout function this is asynchronous in nature
+    console.log("hello world");
+    console.log("jai shree ")
+
+    setTimeout(function(){console.log("ram🙏🙏");},5000);  // ram wil be displayed after 5second
+
+    function getdegree(callback){
+        setTimeout(() => {
+            const degree="🧾🧾";
+            console.log("degree will be provide in 2025", degree);
+            callback(degree);
+            
+        }, 5000);
+    }
+    getdegree((degree)=>{
+        console.log("got the deggree in 2025",degree);
+
+    });
+
+    // degree process through call back funtion
+    //btech degre =>first year 2nd year , third yar and final year then degree
+
+
+    function firstYEAR1(callabck){   
+        setTimeout(() => {
+            const firstYEAR="first year completed";
+            console.log("....",firstYEAR);
+            callabck(firstYEAR);
+        }, 2000);
+    };
+    function secondYEAR2(firstYEAR, callabck){
+        setTimeout(() => {
+            const secondYEAR=firstYEAR+ "second year completed";
+            console.log("....",secondYEAR);
+            callabck(secondYEAR);
+        }, 2000);
+    };
+    function thirdYEAR3(secondYEAR, callabck){
+        setTimeout(() => {
+            const thirdYEAR= secondYEAR+ "third year completed";
+            console.log("....",thirdYEAR);
+            callback(thirdYEAR);
+        }, 2000);
+    };
+    function fourthYEAR4( thirdYEAR, callabck){
+        setTimeout(() => {
+            const fourthYEAR=thirdYEAR+ "fourth year completed";
+            console.log("....",fourthYEAR);
+            callback(fourthYEAR)
+        }, 2000);
+    };
+
+    firstYEAR1((firstYEAR)=>{
+        secondYEAR2(firstYEAR,(secondYEAR)=>{
+            thirdYEAR3(secondYEAR,(thirdYEAR)=>{
+                fourthYEAR4(thirdYEAR,(fourthYEAR)=>{
+                    console.log("btech completed and got the degree",degree);
+
+
+                });
+                
+
+            });
+
+           
+            
+        });
+    });
+   
+
+    getdegree((degree)=>{
+        console.log("btech completed and got the degree",degree);
+    })
+
+</script>
+</html>
